@@ -17,20 +17,8 @@
 - **API Integration:** OpenWeatherMap API (optional)
 
 ## 📁 Project Structure
-/weatheriq
-│
-├── frontend/
-│ ├── index.html
-│ ├── register.html
-│ ├── css/
-│ └── js/
-│
-├── backend/
-│ ├── model.py
-│ ├── preprocess.py
-│ └── app.py (Flask or Django)
-│
-└── README.md
+![image](https://github.com/user-attachments/assets/d856f539-b12e-4ed8-8f38-164810e9536c)
+
 
 
 ## 👨‍💻 Authors
