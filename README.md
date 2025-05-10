@@ -1,6 +1,6 @@
 # 🌦️ Weathrly – ML-Powered Weather Prediction Web App
 
-**Weathrly** is a final year project that combines Machine Learning and Web Development to provide accurate weather forecasts with a user-friendly interface.
+**Weathrly** is a final year project that combines Machine Learning and Web Development to provide almost accurate weather prediction with a user-friendly interface.
 
 ## 🚀 Features
 - 🔍 ML-based short-term weather prediction
