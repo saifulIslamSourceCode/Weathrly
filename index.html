@@ -8,23 +8,59 @@
     <meta name="description" content="Weathrly is a machine learning-powered web app that predicts weather trends and conditions with a clean, responsive interface.">
     <meta name="keywords" content="weather, machine learning, forecast, weather prediction, final year project, Weathrly">
 
-    <!-- logo in tab -->
     <link rel="icon" type="image/png" sizes="48x48" href="Media/icons8-rain-cloud-48.png">
-    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- google fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
 
-     <link rel="stylesheet" href="CSS/style.css">
     <title>Weathrly</title>
 </head>
 <body>
-    <Header id="header-placeholder">
+    <header id="header-placeholder">
+        
+        <!-- Sidebar Toggle Button -->
+        <button id="open-sidebar" class="toggle-btn">☰</button>
+        <div class="dark-shawod"></div>
 
-    </Header>
+        <!-- Sidebar Container -->
+        <div class="container">
+        <!-- Sidebar -->
+        <div class="side-menu" id="sidebar">
+            <div class="side-menu-btn">
+            <button id="close-sidebar">X</button>
+            </div>
+            <div class="logo title">🌦️ Weathrly</div>
+            <div class="side-menu-bar">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="">Forecast</a>
+                <a href="">Predict The Future</a>
+            </nav>
+            <nav>
+                <a href="">⚙️ Settings/Profile</a>
+                <a href="">📄 Privacy Policy / Terms</a>
+                <a href=""><i class="fa-solid fa-circle-half-stroke"></i> Theme Switch</a>
+            </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="logo title">🌦️ Weathrly</div>
+            <nav class="header-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="register.html">Register</a>
+            <a href="" style="text-decoration: underline;">Predict The Future</a>
+            <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        </div>
+
+    </header>
 
     <main>
-        <section class="s1 video-sec" style="background-color: red;">
+        <section class="s1 video-sec">
 
             <video autoplay loop muted playsinline id="bg-video" preload="none">
                 <source src="" type="video/mp4">
@@ -33,9 +69,10 @@
             <div class="text-ontop-video">
                 <p class="no-style cursive_text" style="text-align: center;">Fashion Designer</p>
                 <blockquote class="quote">
-                    "Fashion is not just about clothing; it’s about expressing who you are without saying a word."
+                "Fashion is not just about clothing; it’s about expressing who you are without saying a word."
                 </blockquote>
             </div>
+            
             <div class="logos">
                 <div><a target="_blank" href="https://www.linkedin.com/in/tonima-akter/"><img src="" alt="logo"></a></div>
             </div>
@@ -47,10 +84,15 @@
     </main>
 
     <footer>
-        
+        <!-- Footer content -->
     </footer>
 
-<script src="javaScript/script.js"></script>
-<script src="javaScript/header.js"></script>
+    <!-- Your Scripts -->
+    <script src="javaScript/script.js"></script>
+   
+
+    <script>
+
+    </script>
 </body>
 </html>
