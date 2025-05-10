@@ -121,8 +121,8 @@ body.sidebar-open {
 .side-menu-bar {
     width: 70%;
     margin: auto;
-    height: 48rem;
-    display: flex;
+    /* height: 48rem; */
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
 }
@@ -206,6 +206,9 @@ a:hover {
   .container {
     padding: 30px 10px 10px 10px;
   }
+}
+.side-bar-bttm-nav {
+    margin-top: 5rem !important;
 }
 
 
