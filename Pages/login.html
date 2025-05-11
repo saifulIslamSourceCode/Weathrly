@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Weathrly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        /* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.login-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form .form-group input:focus {
+    outline: none;
+    border-color: #00796b;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+    background-color: #00796b;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #004d40;
+}
+
+.register-redirect {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-redirect a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.register-redirect a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+        width: 80%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+         <!-- Sidebar Toggle Button -->
+        <button id="open-sidebar" class="toggle-btn" data-aos="fade-right">☰</button>
+        <div class="dark-shawod"></div>
+
+        <div class="">
+            <div class="side-menu" id="sidebar">
+                <div class="side-menu-btn">
+                    <button id="close-sidebar">X</button>
+                </div>
+                <div class="logo title">🌦️ Weathrly</div>
+                <div class="side-menu-bar">
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="">Forecast</a>
+                    <a href="">Predict The Future</a>
+                </nav>
+                <nav class="side-bar-bttm-nav">
+                    <a href="">⚙️ Settings/Profile</a>
+                    <a href="">📄 Privacy Policy / Terms</a>
+                    <a href=""><i class="fa-solid fa-circle-half-stroke"></i> Theme Switch</a>
+                </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <p>Welcome back! Please enter your credentials.</p>
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="register-redirect">Don't have an account? <a href="register.html">Register here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="../javaScript/script.js"></script>
+</body>
+</html>

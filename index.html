@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="48x48" href="Media/icons8-rain-cloud-48.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet"> -->
+     <!-- AOS CSS (in <head>) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="CSS/style.css">
 
     <title>Weathrly</title>
@@ -19,7 +22,7 @@
     <header id="header-placeholder">
         
         <!-- Sidebar Toggle Button -->
-        <button id="open-sidebar" class="toggle-btn">☰</button>
+        <button id="open-sidebar" class="toggle-btn" data-aos="fade-right">☰</button>
         <div class="dark-shawod"></div>
 
         <!-- Sidebar Container -->
@@ -50,12 +53,14 @@
             <nav class="header-links text-color-white">
                 <a href="index.html">Home</a>
                 <a href="#about">About</a>
-                <a href="register.html">Register</a>
+                <a href="Pages/register.html">Register</a>
                 <a href="" style="text-decoration: underline;">Predict The Future</a>
-                <a href="#contact">Contact</a>
+                <a href="#feedback">Feedback</a>
             </nav>
         </div>
         </div>
+        <button id="scrollTopBtn" title="Go to top">↑</button>
+
 
     </header>
 
@@ -63,25 +68,116 @@
         <section class="s1 video-sec">
 
             <video autoplay loop muted playsinline id="bg-video" preload="none">
-                <source src="Media/videos/3.mp4" type="video/mp4">
+                <source src="Media/videos/v-bg.mp4" type="video/mp4">
             </video>
 
             <div class="scroll-indicator" style="text-decoration: none;"><a href="#about" class="text-color-white">Scroll down</a></div>
 
 
         </section>
+
+        <section class="s2" id="about">
+
+            <div class="container">
+
+                <div class="about-sec1 " data-aos="fade-up">
+                    <h1>🌤️ About Weathrly</h1>
+                    Weathrly is a modern, machine learning-powered weather prediction web application designed to deliver accurate forecasts with a clean, responsive user interface. Developed as a final year project, Weathrly combines the power of AI with an intuitive design to help users make informed decisions based on future weather trends.
+                    Our platform goes beyond traditional weather apps by integrating predictive analytics to forecast upcoming conditions. Whether you're planning a trip, scheduling events, or just curious about the week ahead, Weathrly provides reliable, data-driven insights in seconds.
+                </div>
+                <div class="about-sec2 sub-about">
+                    <div>
+                        <img src="Media/1 (1).png" alt="Daily update" class="shadow" data-aos="fade-right">
+                    </div>
+                    <div class="center-box">
+                        <h3>✅ Check Current Weather Updates</h3>
+                        Instantly access real-time weather updates for your location or any city worldwide. Get detailed information such as temperature, humidity, wind speed, cloud cover, and sunrise/sunset times—all displayed in a clean and intuitive layout.
+                    </div>
+                </div>
+                <div class="about-sec3 sub-about">
+                    <div class="center-box">
+                        <h3>📅 View Monthly Weather Forecasts</h3>
+                        Weathrly offers extended weather predictions for the entire month, helping users make informed decisions for travel, events, agriculture, and more. Powered by machine learning, the forecast adapts and learns from patterns to improve accuracy over time.
+                    </div>
+                    <div> 
+                        <img src="Media/1 (2).png" alt="Daily update" class="shadow" data-aos="fade-left">
+                    </div>
+                </div>
+                <div class="about-sec2 sub-about">
+                    <div>
+                        <img src="Media/1 (3).png" alt="Daily update" class="shadow" data-aos="fade-right">
+                    </div>
+                    <div class="center-box">
+                        <h3>🌫️ Monitor Air Quality Index (AQI)</h3>
+                        Stay aware of the air you breathe. Weathrly provides real-time air quality data, including pollutant levels like PM2.5 and PM10, and classifies the air quality (Good, Moderate, Unhealthy, etc.) to help users protect their health—especially for those with allergies, asthma, or other respiratory concerns.    
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="s3" id="feedback">
+            <div class="feedback-container" data-aos="fade-up">
+                <h2>We’d Love Your Feedback!</h2>
+                <p>Help us improve <strong>Weathrly</strong> by sharing your thoughts.</p>
+                
+                <form class="feedback-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your feedback..."></textarea>
+                    </div>
+                    <button type="submit">Send Feedback</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <!-- Footer content -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 <strong>Weathrly</strong>. All Rights Reserved.</p>
+                <p>Web Development by <strong><a href="https://www.linkedin.com/in/saifulislam-dev/" style="color: #01a7ff; text-decoration: underline;" target="_blank">Saiful</a></strong> | Machine Learning by <a href="https://www.facebook.com/MdSolaymanHossainShanto" style="color: #01a7ff; text-decoration: underline;"target="_blank">Shanto</a></strong></p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://github.com/saifulIslamSourceCode/Weathrly" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#privacy" class="footer-link">Privacy</a>
+                    <a href="#terms" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+
+
+
+
 
     <!-- Your Scripts -->
     <script src="javaScript/script.js"></script>
-   
 
+    <!-- AOS JS (before </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-
+        AOS.init({
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // delay in ms
+        duration: 1000, // animation duration
+        easing: 'ease', // easing option
+        once: true, // whether animation should happen only once
+        });
     </script>
+
 </body>
 </html>
