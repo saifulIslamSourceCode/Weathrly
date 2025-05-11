@@ -253,6 +253,13 @@ a:hover {
   z-index: -1; /* Sends it behind other content */
   /* opacity: 0.9; */
 }
+.project-title {
+    position: absolute;
+    top: 46%;
+    left: 19%;
+    color: white;
+    font-size: 3em;
+}
 .text-ontop-video{
   position: absolute;
   top: 50%;
