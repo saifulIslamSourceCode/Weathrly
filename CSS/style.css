@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap'); */
 /* Style the entire scrollbar */
 ::-webkit-scrollbar {
   width: 1px; /* Vertical scrollbar width */
@@ -29,7 +29,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     font-weight: 300;
     background-color: #f9f9f9;
     margin: 0;
@@ -173,9 +173,10 @@ a:hover {
 
 .header-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   transition: color 0.2s ease;
+  font-weight: bold;
 }
 
 .header-links a:hover {
@@ -207,12 +208,15 @@ a:hover {
     padding: 30px 10px 10px 10px;
   }
 }
-.side-bar-bttm-nav {
+/* .side-bar-bttm-nav {
     margin-top: 30rem !important;
-}
+} */
 
 
 /* ``````````````````````````Section 1```````````````````````````` */
+.text-color-white {
+  color: white !important;
+}
 #bg-video {
   position: relative;
   top: 0;
@@ -232,7 +236,7 @@ a:hover {
   /* font-size: 2rem;
   font-weight: bold; */
   text-align: center;
-  z-index: 1; /* Ensures text stays above video */
+  z-index: -1; /* Ensures text stays above video */
 }
 .scroll-indicator {
   position: absolute;
@@ -251,8 +255,8 @@ a:hover {
   width: 8px;
   height: 8px;
   margin: 8px auto 0;
-  border-bottom: 2px solid #0a0a0a;
-  border-right: 2px solid #000000;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
   transform: rotate(45deg);
   animation: bounceArrow 1.5s infinite;
 }
