@@ -1,492 +1,187 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap'); */
-/* Style the entire scrollbar */
-::-webkit-scrollbar {
-  width: 1px; /* Vertical scrollbar width */
-  height: 1px; /* Horizontal scrollbar height */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Style the scrollbar track (background) */
-::-webkit-scrollbar-track {
-  background: rgba(255, 211, 117, 0);
-}
+    <meta name="author" content="Saiful">
+    <meta name="description" content="Weathrly is a machine learning-powered web app that predicts weather trends and conditions with a clean, responsive interface.">
+    <meta name="keywords" content="weather, machine learning, forecast, weather prediction, final year project, Weathrly">
 
-/* Style the scrollbar thumb (draggable part) */
-::-webkit-scrollbar-thumb {
-  background: #000000; /* Dark gray color for the thumb */
-  border-radius:10%; /* Rounded corners for the thumb */
-}
+    <link rel="icon" type="image/png" sizes="48x48" href="Media/icons8-rain-cloud-48.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet"> -->
+     <!-- AOS CSS (in <head>) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-/* Style the thumb when hovered */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker thumb color when hovered */
-}
+    <link rel="stylesheet" href="CSS/style.css">
 
-/* Optional: Change the scrollbar corner (where horizontal and vertical meet) */
-::-webkit-scrollbar-corner {
-  background: #ffffff00; /* Same as track color */
-}
-html {
-    scroll-behavior: smooth;
-}
-body {
-    /* font-family: 'Inter', sans-serif; */
-    font-weight: 300;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-.title {
-    font-family: 'Poppins', sans-serif;
-}
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-}
-.container {
-    max-width: 90%;
-    margin: auto;
-}
+    <title>Weathrly</title>
+</head>
+<body>
+    <header id="header-placeholder">
+        
+        <!-- Sidebar Toggle Button -->
+        <button id="open-sidebar" class="toggle-btn" data-aos="fade-right">☰</button>
+        <div class="dark-shawod"></div>
 
-/* ``````````````Header````````````````````` */
+        <!-- Sidebar Container -->
+        <div class="container">
+        <!-- Sidebar -->
+        <div class="side-menu" id="sidebar">
+            <div class="side-menu-btn">
+            <button id="close-sidebar">X</button>
+            </div>
+            <div class="logo title">🌦️ Weathrly</div>
+            <div class="side-menu-bar">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="">Forecast</a>
+                <a href="">Predict The Future</a>
+            </nav>
+            <nav class="side-bar-bttm-nav">
+                <a href="">⚙️ Settings/Profile</a>
+                <a href="">📄 Privacy Policy / Terms</a>
+                <a href=""><i class="fa-solid fa-circle-half-stroke"></i> Theme Switch</a>
+            </nav>
+            </div>
+        </div>
 
-header#header-placeholder {
-    position: absolute;
-    width: 100%;
-}
-
-
-/* === Basic Reset === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f6f9;
-  color: #333;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-body.sidebar-open {
-  overflow: hidden; /* Prevent page scroll when sidebar is open */
-    
-}
-
-/* === Toggle Button === */
-.toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 100;
-  font-size: 24px;
-  background: #0077b6;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* === Sidebar === */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -400px; /* Hidden off-screen */
-  width: 400px;
-  height: 100%;
-  background-color: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-  transition: left 0.3s ease;
-  z-index: 1000;
-  padding: 20px;
-}
-
-.side-menu.open {
-  left: 0;
-}
-
-.side-menu-btn {
-  text-align: right;
-}
-
-.side-menu-btn button {
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.side-menu-bar {
-    width: 70%;
-    margin: auto;
-    /* height: 48rem; */
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* === Sidebar Links === */
-.side-menu-bar nav {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 0;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: #0077b6;
-}
-
-/* === Main Content Layout === */
-.container {
-  padding: 30px 20px 20px 20px;
-}
-
-.main-content {
-    margin-left: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo.title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #01a7ff;
-  margin-bottom: 20px;
-}
-
-/* === Header Navigation === */
-.header-links {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.header-links a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  font-weight: bold;
-}
-
-.header-links a:hover {
-  color: #0077b6;
-}
-.dark-shawod {
-    width: 0vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.342);
-    /* opacity: 0; */
-    transition: 0.5s;
-}
-.dark-shawod-open {
-    width: 100vw;
-    opacity: 1;
-    z-index: 100;
-}
-
-/* === Responsive (optional) === */
-@media (max-width: 768px) {
-  .header-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .container {
-    padding: 30px 10px 10px 10px;
-  }
-}
-/* .side-bar-bttm-nav {
-    margin-top: 30rem !important;
-} */
- #scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-  font-size: 20px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  outline: none;
-  padding: 12px 17px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none; /* Hidden by default */
-  transition: all 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-  background-color: #2b7bb9;
-}
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="logo title">🌦️ Weathrly</div>
+            <nav class="header-links text-color-white">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="Pages/register.html">Register</a>
+                <a href="" style="text-decoration: underline;">Predict The Future</a>
+                <a href="#feedback">Feedback</a>
+            </nav>
+        </div>
+        </div>
+        <button id="scrollTopBtn" title="Go to top">↑</button>
 
 
-/* ``````````````````````````Section 1```````````````````````````` */
-.s1 {
-  height: 100vh;
-  width: 100wh;
-}
-.text-color-white {
-  color: white !important;
-}
-#bg-video {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures it covers the screen */
-  z-index: -1; /* Sends it behind other content */
-  /* opacity: 0.9; */
-}
-.project-title {
-    position: absolute;
-    top: 46%;
-    left: 19%;
-    color: white;
-    font-size: 3em;
-}
-.text-ontop-video{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center text */
-  color: white;
-  /* font-size: 2rem;
-  font-weight: bold; */
-  text-align: center;
-  z-index: -1; /* Ensures text stays above video */
-}
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
-  color: #ffffff;
-  text-align: center;
-  animation: bounceText 2s infinite;
-  z-index: 0;
-}
+    </header>
 
-.scroll-indicator::after {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  margin: 8px auto 0;
-  border-bottom: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
-  transform: rotate(45deg);
-  animation: bounceArrow 1.5s infinite;
-}
-@keyframes bounceArrow {
-  0%, 20%, 50%, 80%, 100% {
-    transform: rotate(45deg) translateY(0);
-  }
-  40% {
-    transform: rotate(45deg) translateY(6px);
-  }
-  60% {
-    transform: rotate(45deg) translateY(4px);
-  }
-}
+    <main>
+        <section class="s1 video-sec">
 
-@keyframes bounceText {
-  0%, 100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, 5px);
-  }
-}
+            <video autoplay loop muted playsinline id="bg-video" preload="none">
+                <source src="Media/videos/v-bg.mp4" type="video/mp4">
+            </video>
 
-/* `````````````````````section 2````````````````````` */
-.about-sec1 {
-    padding: 4rem 0rem;
-}
-.sub-about {
-  display: flex;
-}
-.center-box {
-  display: flex;
-  justify-content: center; /* center horizontally */
-  /* align-items: center; */     /* center vertically */
-  flex-direction: column;
-  padding: 0rem 2rem;
-}
-.shadow {
-  box-shadow: 1px 5px 11px 0px gray;
-}
+            <h1 class="project-title">
+                Weather Prediction for Improved Decision Making
+            </h1>
 
-/* ```````````````feedback``````````````````````````` */
-/* Feedback Section Styling */
-#feedback {
-  background: #ffffff;
-  /* background: linear-gradient(77deg, rgba(255, 255, 255, 1) 0%, rgba(224, 238, 255, 1) 28%, rgba(217, 233, 255, 1) 50%, rgba(201, 225, 255, 1) 72%, rgba(255, 255, 255, 1) 100%); */
-  padding: 3rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+            <div class="scroll-indicator" style="text-decoration: none;"><a href="#about" class="text-color-white">Scroll down</a></div>
 
-.feedback-container {
-  max-width: 600px;
-  width: 100%;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  text-align: center;
-}
 
-.feedback-container h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+        </section>
 
-.feedback-container p {
-  margin-bottom: 1.5rem;
-  color: #555;
-}
+        <section class="s2" id="about">
 
-.feedback-form .form-group {
-  margin-bottom: 1rem;
-  text-align: left;
-}
+            <div class="container">
 
-.feedback-form label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: 600;
-}
+                <div class="about-sec1 " data-aos="fade-up">
+                    <h1>🌤️ About Weathrly</h1>
+                    Weathrly is a modern, machine learning-powered weather prediction web application designed to deliver accurate forecasts with a clean, responsive user interface. Developed as a final year project, Weathrly combines the power of AI with an intuitive design to help users make informed decisions based on future weather trends.
+                    Our platform goes beyond traditional weather apps by integrating predictive analytics to forecast upcoming conditions. Whether you're planning a trip, scheduling events, or just curious about the week ahead, Weathrly provides reliable, data-driven insights in seconds.
+                </div>
+                <div class="about-sec2 sub-about">
+                    <div>
+                        <img src="Media/1 (1).png" alt="Daily update" class="shadow" data-aos="fade-right">
+                    </div>
+                    <div class="center-box">
+                        <h3>✅ Check Current Weather Updates</h3>
+                        Instantly access real-time weather updates for your location or any city worldwide. Get detailed information such as temperature, humidity, wind speed, cloud cover, and sunrise/sunset times—all displayed in a clean and intuitive layout.
+                    </div>
+                </div>
+                <div class="about-sec3 sub-about">
+                    <div class="center-box">
+                        <h3>📅 View Monthly Weather Forecasts</h3>
+                        Weathrly offers extended weather predictions for the entire month, helping users make informed decisions for travel, events, agriculture, and more. Powered by machine learning, the forecast adapts and learns from patterns to improve accuracy over time.
+                    </div>
+                    <div> 
+                        <img src="Media/1 (2).png" alt="Daily update" class="shadow" data-aos="fade-left">
+                    </div>
+                </div>
+                <div class="about-sec2 sub-about">
+                    <div>
+                        <img src="Media/1 (3).png" alt="Daily update" class="shadow" data-aos="fade-right">
+                    </div>
+                    <div class="center-box">
+                        <h3>🌫️ Monitor Air Quality Index (AQI)</h3>
+                        Stay aware of the air you breathe. Weathrly provides real-time air quality data, including pollutant levels like PM2.5 and PM10, and classifies the air quality (Good, Moderate, Unhealthy, etc.) to help users protect their health—especially for those with allergies, asthma, or other respiratory concerns.    
+                    </div>
+                </div>
+            </div>
 
-.feedback-form input,
-.feedback-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+        </section>
 
-.feedback-form button {
-  padding: 0.8rem 1.5rem;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+        <section class="s3" id="feedback">
+            <div class="feedback-container" data-aos="fade-up">
+                <h2>We’d Love Your Feedback!</h2>
+                <p>Help us improve <strong>Weathrly</strong> by sharing your thoughts.</p>
+                
+                <form class="feedback-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your feedback..."></textarea>
+                    </div>
+                    <button type="submit">Send Feedback</button>
+                </form>
+            </div>
+        </section>
 
-.feedback-form button:hover {
-  background-color: #2b7bb9;
-}
-/* ````````````````footer````````````````` */
-/* General Footer Styling */
-.footer {
-    background-color: #222;
-    color: #fff;
-    padding: 15px 0;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
+    </main>
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 <strong>Weathrly</strong>. All Rights Reserved.</p>
+                <p>Web Development by <strong><a href="https://www.linkedin.com/in/saifulislam-dev/" style="color: #01a7ff; text-decoration: underline;" target="_blank">Saiful</a></strong> | Machine Learning by <a href="https://www.facebook.com/MdSolaymanHossainShanto" style="color: #01a7ff; text-decoration: underline;"target="_blank">Shanto</a></strong></p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://github.com/saifulIslamSourceCode/Weathrly" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#privacy" class="footer-link">Privacy</a>
+                    <a href="#terms" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-.footer-left p,
-.footer-right a {
-    margin: 5px 0;
-}
 
-.footer-left p {
-    color: #bbb;
-}
 
-/* Footer links container */
-.footer-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px; /* Adds space between links */
-}
 
-.footer-right {
-    text-align: right;
-}
 
-.footer-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
 
-.footer-link:hover {
-    color: #fc5c7d;
-}
+    <!-- Your Scripts -->
+    <script src="javaScript/script.js"></script>
 
-/* GitHub Link Styling */
-.github-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
+    <!-- AOS JS (before </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // delay in ms
+        duration: 1000, // animation duration
+        easing: 'ease', // easing option
+        once: true, // whether animation should happen only once
+        });
+    </script>
 
-.github-link i {
-    margin-right: 8px;
-    font-size: 18px;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.github-link:hover i {
-    color: #fc5c7d;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left p,
-    .footer-right a {
-        margin: 10px 0;
-    }
-
-    .footer-links {
-        justify-content: center;
-        gap: 10px;
-    }
-}
+</body>
+</html>

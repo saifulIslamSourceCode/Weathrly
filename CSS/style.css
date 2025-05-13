@@ -327,7 +327,7 @@ a:hover {
   justify-content: center; /* center horizontally */
   /* align-items: center; */     /* center vertically */
   flex-direction: column;
-  padding: 0rem 17rem;
+  padding: 0rem 2rem;
 }
 .shadow {
   box-shadow: 1px 5px 11px 0px gray;
