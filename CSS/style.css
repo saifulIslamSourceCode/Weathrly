@@ -259,6 +259,7 @@ a:hover {
     left: 19%;
     color: white;
     font-size: 3em;
+    font-weight: normal;
 }
 .text-ontop-video{
   position: absolute;
